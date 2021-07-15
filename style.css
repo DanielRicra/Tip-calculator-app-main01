@@ -1,0 +1,270 @@
+/*================ GOOGLE FONTS ================*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* ---------My variables-------- */
+:root {
+    /*Primary color*/
+    --Strong-cyan: hsl(172, 67%, 45%);
+    /*neutral colors*/
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-2: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --bg-button-color: hsl(183, 79%, 24%);
+    /*Typography*/
+    --form-inputs: 24px;
+    --font-family-mono: 'Space Mono', monospace;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*==================== BASE ====================*/
+h1, h2, p, input, button{
+    color: var(--Dark-grayish-cyan);
+    font-weight: 400;
+    font-family: var(--font-family-mono);
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family-mono);
+    background: var(--Light-grayish-cyan);
+}
+input {
+    font-size: 24px;
+    width: 100%;
+    text-align: right;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    background-color: inherit;
+    caret-color: var(--Strong-cyan);
+}
+input:hover,
+button:hover {
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    font-size: 14px;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+.title__error {
+    color: #F00;
+    opacity: 0;
+}
+
+
+/*==============================================*/
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+/*=========================================*/
+
+h2 {
+    margin-top: 5rem;
+    margin-bottom: 3.75rem;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    letter-spacing: .5rem;
+}
+.content {
+    background-color: var(--White);
+    width: 63%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.75rem;
+    border-radius: .75rem;
+    padding: 1.5rem;
+}
+p {
+    color: var(--Dark-grayish-cyan-2);
+    font-size: 12px;
+}
+
+/*=======OPERATIONS========*/
+.operations {
+    background-color: var(--White);
+    padding: .75rem;
+    margin: 0 .25rem;
+}
+.bill {
+    margin-bottom: 1.75rem;
+}
+.operations__input {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Light-grayish-cyan-2);
+    border: 3px solid var(--Light-grayish-cyan-2);
+    border-radius: .25rem;
+    align-items: center;
+}
+.operations__input-active {
+    border: 3px solid var(--Strong-cyan);
+}
+.operations__input-active-error {
+    border: 3px solid #F00;
+}
+.operations__input img {
+    width: 12px;
+    height: 16px;
+}
+.select__tip {
+    margin-bottom: 1.75rem;
+}
+.operations__input img, 
+.operations__input input {
+    margin: 0 .75rem;
+}
+.select__tip-buttons {
+    margin-top: .75rem;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .75rem;
+    background-color: var(--White);
+}
+.button {
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    padding: 4px 0;
+    border-radius: .25rem;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--White);
+}
+.custom {
+    width: 100%;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 3px;
+    background-color: var(--Light-grayish-cyan-2);
+    border: 3px solid var(--Light-grayish-cyan-2);
+    text-align: center;
+    border-radius: .25rem;
+}
+.custom-active {
+    border: 3px solid var(--Strong-cyan);
+    text-align: right;
+}
+.button-active{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-weight: bold;
+}
+/*removin the arrows*/
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*============RESULTS=============*/
+.results {
+    background-color: var(--Very-dark-cyan);
+    border-radius: .75rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+.results .title {
+    color: var(--Light-grayish-cyan);
+}
+.button__reset {
+    border: none;
+    border-radius: .25rem;
+    padding: 8px 0;
+    font-size: 20px;
+    background: var(--bg-button-color);
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+.button__reset-active {
+    background-color: var(--Strong-cyan);
+}
+.button__reset-active:active {
+    background: hsl(173, 61%, 77%);
+}
+.results__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    margin-top: 0.75rem;
+    align-items: center; 
+}
+.results__content h1 {
+    font-weight: 700;
+    color: var(--Strong-cyan);
+    font-size: 44px;
+}
+
+@media screen and (max-width: 1040px){
+    .content {
+        width: 80%;
+    }
+     .buttons {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: .75rem;
+    }
+    
+    h2 {
+        margin-top: 2.25rem;
+        margin-bottom: 1.69rem;
+    }
+
+}
+@media screen and (max-width: 750px){
+     .content {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-gap: 1.25rem;
+    }
+    .results__content h1 {
+        font-size: 34px;
+    }
+}
+@media screen and (max-width: 375px){
+    input {
+        font-size: 22px;
+    }
+    .operations {
+        position: relative;
+        width: 100%;
+        padding: .25rem;
+        margin: 0 .15rem;
+    }
+    .operations,
+    .results {
+        width: 100%;
+    }
+    .button {
+        padding: 4px 0;
+        border-radius: .25rem;
+        font-size: 20px;
+    }
+    .custom {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!--My styles-->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h2>SPLI <br>TTER</h2>
+
+    <div class="content">
+      <div class="operations">
+        <div class="bill">
+          <div class="titles">
+            <h3  class="title">Bill</h3>
+            <!-- <h3 class="title title__error">Can't be zero</h3> -->
+          </div>
+          <div class="operations__input" id="bill">
+            <img src="images/icon-dollar.svg" alt="">
+            <input type="number" id="bill-input" placeholder="0">
+          </div>
+          
+        </div> 
+
+        <div class="select__tip">
+          <h3  class="title">Select Tip %</h3>
+          
+          <div class="select__tip-buttons">
+            <ul class="buttons">
+              <li>
+                <button class="button">5%</button>
+              </li>
+              <li>
+                <button class="button">10%</button>
+              </li>
+              <li>
+                <button class="button">15%</button>
+              </li>
+              <li>
+                <button class="button">25%</button>
+              </li>
+              <li>
+                <button class="button">50%</button>
+              </li>
+              <li>
+                <input class="custom" placeholder="Custom" type="number">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="num__people">
+          <div class="titles">
+            <h3  class="title">Number of People</h3>
+            <h3 class="title title__error">Can't be zero</h3>
+          </div>
+          <div class="operations__input" id="num-people">
+            <img src="images/icon-person.svg" alt="">
+            <input type="number" name="" id="num-people-input" placeholder="0">
+          </div>
+        </div>
+              
+      </div>
+
+      <div class="results">
+        <div>
+          <div class="results__content">
+            <div>
+              <h3 class="title">Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+  
+            <div><h1 id="tip-amount">$0.00</h1></div>
+          </div>
+          
+          <div class="results__content">
+            <div>
+              <h3 class="title">Total</h3>
+              <p>/ person</p>
+            </div>
+            
+            <div><h1 id="total">$0.00</h1></div>
+          </div>
+        </div>
+
+        <button class="button__reset">RESET</button>
+      </div>
+    </div>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Daniel Ricra</a>.
+    </div>
+  </div>
+
+  <!-- Javascrip -->
+  <script src="main.js"></script>
+</body>
+</html>
